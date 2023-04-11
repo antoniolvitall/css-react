@@ -7,6 +7,8 @@ function App() {
 const n = 15;
 const [name] = useState("Antonio");
 
+const redTitle = false;
+
   return (
     <div className="App">
       {/* CSS Global */}
@@ -20,6 +22,9 @@ const [name] = useState("Antonio");
       <h2 style={n < 10 ? ({color: "purple"}) : ({color: "pink"}) }>CSS dinamico</h2>
       <h2 style={n > 10 ? ({color: "purple"}) : ({color: "pink"}) }>CSS dinamico</h2>
       <h2 style={name === "Antoni" ? ({color: "green", backgroundColor: "#000"}) : null }>Teste nome</h2>
+      {/* classe dinamica */}
+      <h2 className={redTitle ? "red-title" : "title" }>Este titulo vai ter classe dinamica</h2>
+      
     </div>
   );
 }
